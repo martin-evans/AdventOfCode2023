@@ -3,36 +3,38 @@ namespace MJE.Advent.Trebuchet;
 public class CalibratorTests
 {
     [Test]
-    public void Test1()
+    public void InitialTestSpec()
     {
         const string calibrationDocument = "1abc2\npqr3stu8vwx\na1b2c3d4e5f\ntreb7uchet";
 
         Assert.That(Calibrator.CalculateSum(calibrationDocument), Is.EqualTo(142));
     }
-    
-    
+
     [Test]
     public void PuzzleQuestion()
     {
-        Console.WriteLine(Calibrator.CalculateSum(PuzzleInput.CalibarationDocument));
+        Assert.That(Calibrator.CalculateSum(PuzzleInput.CalibarationDocument), Is.EqualTo(54605));
     }
     
-    
-}
-
-public static class Calibrator
-{
-    public static int CalculateSum(string calibrationDocument)
+    [Test]
+    public void Puzzle2Question()
     {
-  
-        var ret = calibrationDocument.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries)
-            .Select(x =>
-            {
-                var res = x.Where(c => int.TryParse(c.ToString(), out _)).ToArray();
-                var op = string.Concat(new[] { res[0], res[^1] }); ;
-                return int.Parse(op);
-            });
+        var ret = Calibrator.CalculateSecondarySum(PuzzleInput.CalibarationDocument);
 
-        return ret.Sum();
+        Console.WriteLine(ret);
+        
     }
+
+
+    [Test]
+    public void SecondaryTestSpec()
+    {
+        const string calibrationDocument =
+            "two1nine\neightwothree\nabcone2threexyz\nxtwone3four\n4nineeightseven2\nzoneight234\n7pqrstsixteen";
+        
+        var r = Calibrator.CalculateSecondarySum(calibrationDocument);
+        
+        Assert.That(r, Is.EqualTo(281));
+    }
+    
 }
