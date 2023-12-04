@@ -52,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701681892991</updated>
-      <workItem from="1701681894072" duration="3513000" />
+      <workItem from="1701681894072" duration="5287000" />
     </task>
     <servers />
   </component>
@@ -66,17 +66,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/../MJE.Advent.CubeConundrum/UnitTest1.cs</url>
-          <line>28</line>
-          <properties documentPath="C:\repos\AdventOfCode2023\Day2\MJE.Advent.CubeConundrum\UnitTest1.cs" initialLine="28" containingFunctionPresentation="Method 'InputParserTests'">
+          <url>file://$PROJECT_DIR$/../MJE.Advent.CubeConundrum/Answers.cs</url>
+          <line>8</line>
+          <properties documentPath="C:\repos\AdventOfCode2023\Day2\MJE.Advent.CubeConundrum\Answers.cs" initialLine="8" containingFunctionPresentation="Method 'AnswerOne'">
             <startOffsets>
-              <option value="898" />
+              <option value="174" />
             </startOffsets>
             <endOffsets>
-              <option value="941" />
+              <option value="224" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
