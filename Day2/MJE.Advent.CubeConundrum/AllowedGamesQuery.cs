@@ -1,12 +1,12 @@
 ﻿namespace MJE.Advent.CubeConundrum;
 
-public class GameFilter
+public class AllowedGamesQuery
 {
     private const int redMax = 12;
     private const int greenMax = 13;
     private const int blueMax = 14;
 
-    public static int AllowedGames(Game[] games)
+    public static int Calculate(Game[] games)
     {
         Func<List<Subset>, bool> exceedCriteria = list =>
         {

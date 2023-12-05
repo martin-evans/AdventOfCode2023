@@ -25,9 +25,20 @@ public class GameTests
     }
 
     [Test]
-    public void GameQueryTests()
+    public void AllowedGameQueryTests()
     {
         var games = InputParser.Generate(puzzleInput);
-        Console.WriteLine(GameFilter.AllowedGames(games));
+        Assert.That(AllowedGamesQuery.Calculate(games), Is.EqualTo(8));
+    }
+    
+    [Test]
+    public void GamePowerSetQueryTests()
+    {
+        var games = InputParser.Generate(puzzleInput);
+        
+        Assert.That(PowerSetQuery.Calculate(games), Is.EqualTo(2286));
+        
+        Console.WriteLine(PowerSetQuery.Calculate(games));
+        
     }
 }
